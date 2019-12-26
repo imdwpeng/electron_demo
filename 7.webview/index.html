@@ -1,0 +1,28 @@
+<!--
+ * @Author: Eric
+ * @Date: 2019-12-23 11:39:53
+ * @LastEditors  : Eric
+ * @LastEditTime : 2019-12-23 18:12:44
+ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div style="display:flex;">
+        <span style="flex:1;">iframe</span>
+        <span style="flex:1;">webview</span>
+    </div>
+    <div style="display:flex;">
+        <iframe id="iframe" src="./child1.html" style="flex:1; height:50%">
+        </iframe>
+        <webview id="webview" src="./child1.html" style="flex:1; height:50%">
+        </webview>
+    </div>
+</body>
+<script src="render/openWebview.js"></script>
+</html>

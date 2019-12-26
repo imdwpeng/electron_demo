@@ -1,0 +1,16 @@
+{
+  "name": "electron_study",
+  "version": "1.0.0",
+  "main": "main.js",
+  "dependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron ."
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "electron": "^7.1.7"
+  }
+}
