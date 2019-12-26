@@ -1,0 +1,72 @@
+{
+  "name": "electron_study",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron .",
+    "clear": "rimraf dist",
+    "pack": "npm run clear && electron-builder --dir",
+    "dist": "npm run clear && electron-builder"
+  },
+  "build": {
+    "productName": "electron_study",
+    "appId": "electron_study",
+    "copyright": "Copy @ 2020 ${author}",
+    "directories": {
+      "output": "dist"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowElevation": true,
+      "allowToChangeInstallationDirectory": true,
+      "installerIcon": "build/icons/install.ico",
+      "uninstallerIcon": "build/icons/uninstall.ico",
+      "installerHeaderIcon": "build/icons/install.ico",
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "electron-builder-start",
+      "include": "build/script/installer.nsh"
+    },
+    "dmg": {
+      "contents": [
+        {
+          "x": 410,
+          "y": 150,
+          "type": "link",
+          "path": "/Applications"
+        },
+        {
+          "x": 130,
+          "y": 150,
+          "type": "file"
+        }
+      ]
+    },
+    "mac": {
+      "icon": "build/icons/install.icns"
+    },
+    "win": {
+      "icon": "build/icons/install.ico",
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "ia32"
+          ]
+        }
+      ]
+    },
+    "linux": {
+      "icon": "build/icons"
+    }
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "electron": "^7.1.7",
+    "electron-builder": "^21.2.0",
+    "rimraf": "^3.0.0"
+  }
+}
